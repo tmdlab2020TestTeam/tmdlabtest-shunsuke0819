@@ -25,7 +25,13 @@ void quick_sort(int num[total_num], int left, int right){
 
   while(1){ 
     // pivotより大きい値が出るまでlを増加させる．
-    // pivotより小さい値が出るまでrを減少させる．                                 
+    while(num[l] < pivot){
+      l++;
+    }
+    // pivotより小さい値が出るまでrを減少させる．   
+    while(num[r] > pivot){
+      r--;
+    }                              
       if (l >= r)               // i>=jなら無限ループから抜ける．
         break;                 
       tmp = num[l];             // num[i]とnum[j]を交換する．
@@ -47,6 +53,12 @@ void remainder_number(int num[total_num]){
   int count=0;
   int remainder_num[total_num];
   // for文で回して，条件を満たした場合remainder_numに格納してcountを増やす．
+  for(int i=0; i<total_num; i++){
+    if(num[i] % 5 != 0){
+      remainder_num[count] = num[i];
+      count++;
+    }
+  }
   total_num = count;
   show_data(remainder_num);
   quick_sort(remainder_num, 0, total_num-1); // 配列，一番頭の配列番号，一番最後の配列番号
