@@ -18,6 +18,11 @@ void selection_sort(int num[total_num]){
   for(array_num=0; array_num<total_num; array_num++){
     min = array_num;  // 最小値の配列番号を入れる．
     // for文で回して，minより小さい値があれば置き換える．
+    for(int i=array_num+1; i<total_num; i++){
+      if(num[min] > num[i]){
+        min = i;
+      }
+    }
     if(min != array_num){
       tmp = num[array_num];
       num[array_num] = num[min];
