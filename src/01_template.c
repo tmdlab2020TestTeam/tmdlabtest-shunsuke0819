@@ -19,6 +19,9 @@ void bubble_sort(int num[total_num]){
     for(i=total_num-1; i>array_num; i--){
       if(num[i] < num[i-1]){
         // 配列前後の値を入れ替える．tmpで一時的に値を退避させておく．
+        tmp = num[i];
+        num[i] = num[i-1];
+        num[i-1] = tmp;
       }
     }
   }
