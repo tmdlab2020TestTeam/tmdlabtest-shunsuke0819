@@ -1,0 +1,45 @@
+11:03:53 
+11:03:59 ls -a
+11:04:06 ls .kani
+11:04:39 cd src
+11:04:43 ls
+11:05:07 git kani disable
+11:05:16 open .
+11:07:15 cc -o 01_template 01_template.c
+11:07:20 ./01_template
+11:07:49 git add 01_template.c
+11:08:10 git commit -m "素数を表示する部分を実装しました。"
+11:09:01 cc -o 01_template 01_template.c
+11:09:04 ./01_template
+11:09:12 git add 01_template.c
+11:09:36 git commit -m "バブルソートを実装しました。"
+11:09:39 git status
+11:10:08 git kani enable
+11:11:00 cc -o 02_template 02_template.c
+11:11:04 ./02_template
+11:11:55 cc -o 02_template 02_template.c
+11:11:56 ./02_template
+11:12:27 git add 02_template.c
+11:12:59 
+11:17:06 open ../.kani
+11:17:21 cat ../.kani/test.log
+11:18:42 git status
+11:19:11 git commit -m "素数以外を表示する部分を実装しました。"
+11:20:54 cc -o 02_template 02_template.c
+11:20:59 ./02_template
+11:21:12 open .
+11:21:48 cc -o 02_template 02_template.c
+11:21:50 ./02_template
+11:22:04 git add 02_template.c
+11:22:21 git commit -m "選択ソートの部分を実装しました。"
+11:22:24 git status
+11:22:54 git kani disable
+11:25:46 cc -o 03_template 03_template.c
+11:25:50 ./03_template
+11:27:36 cc -o 03_template 03_template.c
+11:27:44 ./03_template
+11:28:27 git status
+11:28:39 git add 03_template.c
+11:28:42 git status
+11:29:57 git commit -m "クイックソートの部分と取捨選択の部部を実装しました。"
+11:30:01 git status
