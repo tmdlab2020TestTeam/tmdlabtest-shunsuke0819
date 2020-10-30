@@ -44,6 +44,10 @@ void not_prime_number(int num[total_num]){
       }
     }
     // flagが1の時，not_prime_numに値を追加していく．
+    if(flag == 1){
+      not_prime_num[count] = num[array_num];
+      count++;
+    }
   }
   total_num = count;
   show_data(not_prime_num);
