@@ -34,6 +34,11 @@ void prime_number(int num[total_num]){
   for(array_num=0; array_num<total_num; array_num++){
     flag = 0;
     // for文で2倍3倍..と回して，nの倍数だった場合flagを立てる．
+    for(int i=2; i<num[array_num]; i++){
+      if(num[array_num] % i == 0){
+        flag = 1;
+      }
+    }
     if(flag==0){
       prime_num[count] = num[array_num];
       count++;
